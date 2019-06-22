@@ -1,6 +1,20 @@
 <html>
-<head><title>Gunjan's Blog</title></head>
-<body>
-  <h1 align="center">Coming Soon...</h1>
-</body>
+    <head>
+        <title>Gunjan's Blog</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">Gunjan's Blog</a></h1>
+        </div>
+
+        <div>
+          {% for post in posts %}
+            <div>
+              <p>published: {{ post.published_date }}</p>
+              <h2><a href="">{{ post.title }}</a></h2>
+              <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+          {% endfor %}
+        </div>
+    </body>
 </html>
